@@ -13,6 +13,9 @@ public class MyBinarySearchTree<E extends Comparable<E>> implements BinarySearch
     @Override
     public void insert(E data) {
         Node<E> node = new implementation.Node<>(data);
+        if(isEmpty()){
+            root = node;
+        }
 
     }
 
@@ -49,5 +52,9 @@ public class MyBinarySearchTree<E extends Comparable<E>> implements BinarySearch
     @Override
     public int height(Node<E> node) {
         return 0;
+    }
+
+    public boolean isEmpty(){
+        return root==null;
     }
 }
