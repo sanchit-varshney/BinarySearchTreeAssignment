@@ -56,11 +56,6 @@ public class MyBinarySearchTree<E extends Comparable<E>> implements BinarySearch
     }
 
     @Override
-    public void delete(E data) {
-
-    }
-
-    @Override
     public int height(Node<E> node) {
         return 0;
     }
@@ -77,11 +72,21 @@ public class MyBinarySearchTree<E extends Comparable<E>> implements BinarySearch
 
     @Override
     public void preOrder(Node<E> node) {
+        if(node!= null){
+            System.out.println(node.getData());
+            preOrder(node.getLeft());
+            preOrder(node.getRight());
+        }
 
     }
 
     @Override
     public void inOrder(Node<E> node) {
+
+    }
+    @Override
+    public void delete(E data) {
+
 
     }
 }
