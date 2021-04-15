@@ -9,10 +9,10 @@ public class MyBinarySearchTree<E extends Comparable<E>> implements BinarySearch
     public Node<E> getRoot() {
         return root;
     }
-    //complete this class
 
     @Override
     public void insert(E data) {
+        Node<E> node = new implementation.Node<>(data);
 
     }
 
